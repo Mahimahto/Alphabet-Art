@@ -28,8 +28,33 @@
 
 .cardContainer{
   display: flex;
+  justify-content: space-between;
+}
+.userCard{
+  border:2px solid black;
+}
+.userCard div{
+ display: flex;
+}
+/* .identity{ */
+/* display: flex;
+  margin-top: -20px;
+  margin-left: 10px;
+} */
+.userName{
+  display: block;
+}
+.userAge{
+  display: block;
+  font-family: none;
+  font-size: 1em;
 }
 
+.profile{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
 .sapne-waalis h2 {
   font-family: 'Mochiy Pop One';
   color: #1375E4;
@@ -52,8 +77,26 @@ font-size: 3em;
   color: red;
 }
 
+#identy{
+  display: block;
+  margin-top: 2px;
+  margin-left: 20px;
+
+}
+
 @media(max-width:1000px){
   .sapne-waalis{
     font-size: 1em;
   }
+  #card-4{
+    display: none;
+  }
+  #placeholder{
+    width: 100%;
+  }
+  .profile{
+    width: 30px;
+    height: 50px;
+  }
+  
 }
