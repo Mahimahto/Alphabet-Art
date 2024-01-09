@@ -92,7 +92,26 @@ for(let i=65; i<=90; i++){
         likeIcon.classList.remove("fa-bounce");
         event.stopPropagation();
     })
-
+    // overlay Div
+    let overlayDiv = document.createElement("div")
+    overlayDiv.classList.add("overlay-div")
+    //overlay image
+    let overlayImg = document.createElement("img")
+    overlayImg.classList.add("overlay-img")
+    overlayDiv.appendChild(overlayImg)
+    container.appendChild(overlayDiv)
+    //close Icon
+    let closeIcon = document.createElement("i")
+    closeIcon.classList.add("fa-solid","fa-xmark")
+    overlayDiv.appendChild(closeIcon)
+    closeIcon.addEventListener("click",function(){
+        overlayDiv.style.display = "none"
+    })
+    // overlay-image on click
+    imgContainer.addEventListener("click",function(){
+        overlayDiv.style.display = "block"
+        overlayImg.src = alphabetImg.src
+    })
 }
 
 // Give design background to back of each alphabet card

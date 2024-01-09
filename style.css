@@ -201,6 +201,35 @@ nav div p{
 .card.flipped{
     transform: rotateY(180deg);
 }
+/* overlay image */
+.overlay-div{
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background:black; 
+  opacity: 0.8;
+}
+.overlay-img{
+display: block;
+margin: auto;
+}
+/* close overlay image */
+.fa-xmark{
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
 /* Design patterns for back of alphabet cards */
 .pattern1 {
     background-image: url(./assets/designPatterns/pattern1.svg);
