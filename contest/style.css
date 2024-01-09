@@ -36,11 +36,7 @@
 .userCard div{
  display: flex;
 }
-/* .identity{ */
-/* display: flex;
-  margin-top: -20px;
-  margin-left: 10px;
-} */
+
 .userName{
   display: block;
 }
