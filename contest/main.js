@@ -1,35 +1,39 @@
-import data from './main.json' assert{type: 'json'}
-//user-profile picture
-let profile1 = document.querySelector("#profile-1")
-let profile2 = document.querySelector("#profile-2")
-let profile3 = document.querySelector("#profile-3")
-let profile4 = document.querySelector("#profile-4")
+// import data from './main.json' assert{type: 'json'}
 
-profile1.setAttribute("src",data[0].src)
-profile2.setAttribute("src",data[1].src)
-profile3.setAttribute("src",data[2].src)
-profile4.setAttribute("src",data[3].src)
-
-//user-name
-let userName1 = document.querySelector("#userName-1")
-let userName2 = document.querySelector("#userName-2")
-let userName3 = document.querySelector("#userName-3")
-let userName4 = document.querySelector("#userName-4")
-
-userName1.innerText = data[0].name
-userName2.innerText = data[1].name
-userName3.innerText = data[2].name
-userName4.innerText = data[3].name
-
-//user-Age
-let userAge1 = document.querySelector("#userAge-1")
-let userAge2 = document.querySelector("#userAge-2")
-let userAge3 = document.querySelector("#userAge-3")
-let userAge4 = document.querySelector("#userAge-4")
-
-userAge1.innerText = data[0].age
-userAge2.innerText = data[1].age
-userAge3.innerText = data[2].age
-userAge4.innerText = data[3].age
-
-
+// let cardContainer = document.createElement("div")
+// cardContainer.setAttribute("class", "cardContainer")
+// for (let i = 0; i < data.length; i++) {
+//     //user-Alphabet-Card
+//     let artworkContainer = document.querySelector(".artwork-container")
+//     let card = document.createElement("div")
+//     cardContainer.appendChild(card)
+//     card.setAttribute("class", "card")
+//     artworkContainer.appendChild(cardContainer)
+//     //user-alphabet-art
+//     let alphabetArt = document.createElement("img")
+//     alphabetArt.setAttribute("class", "alphabet-art")
+//     alphabetArt.setAttribute("src", "https://img.freepik.com/premium-photo/fantasy-monogram-letter_738906-322.jpg?size=626&ext=jpg&ga=GA1.1.1361178089.1689231563&semt=ais")
+//     alphabetArt.setAttribute("alt", "alphabetArt")
+//     card.appendChild(alphabetArt)
+//     //user profile
+//     let userProfile = document.createElement("div")
+//     userProfile.setAttribute("class", "user-profile")
+//     card.appendChild(userProfile)
+//     //user-name
+//     let userName = document.createElement("p")
+//     userName.setAttribute("class", "user-name")
+//     userName.innerHTML = data[i].name
+//     //user-age
+//     let userAge = document.createElement("p")
+//     userAge.innerHTML = data[i].age
+//     userAge.setAttribute("class", "user-age")
+//     //user identity                                                                
+//     let identity = document.createElement("div")
+//     identity.append(userName, userAge)
+//     //user-profile-picture
+//     let profileImg = document.createElement("img")
+//     profileImg.setAttribute("class", "profile-img")
+//     profileImg.setAttribute("src", data[i].src)
+//     profileImg.setAttribute("alt", "user-profile-picture")
+//     userProfile.append(profileImg, identity)
+// }
