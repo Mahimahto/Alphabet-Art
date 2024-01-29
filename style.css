@@ -193,6 +193,17 @@ nav div p {
   font-size: 15px;
   font-family: none;
 }
+ .toolTipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
 
 .card {
   position: relative;
