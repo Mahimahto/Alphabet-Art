@@ -126,30 +126,4 @@ allBackCards.forEach((backCard)=>{
         j=0;
     backCard.classList.add(patterns[j]);
     j++;
-<<<<<<< HEAD
 })
-
-
-// Carousel
-let carouselImages = ["https://placehold.co/375x187/orange/white?text=Stickers","https://placehold.co/375x187/green/white?text=Workshop","https://placehold.co/375x187/purple/white?text=Contest"];
-let carouselImg = document.querySelector(".carousel img");
-let i = 0;
-
-let dots = document.querySelectorAll(".dot");
-
-setInterval(function(){
-    //move images every 4 seconds
-    i++;
-    if(i>2)
-        i=0;
-    carouselImg.src = carouselImages[i];
-
-    //color dots corresponding to the image
-    let currentDotId = "#dot" + i;
-    let currentDot = document.querySelector(currentDotId);
-    dots.forEach((dot) => (dot.style.backgroundColor = "#59AFFF"));
-    currentDot.style.backgroundColor = "white";
-},4000)
-=======
-})
->>>>>>> 97df4079c87021491314238d625ff6131bf70720

@@ -403,7 +403,7 @@ td{
 }
 
 /* Media query to change grid count and text size for different screen sizes */
-<<<<<<< HEAD
+
 @media (min-width:320px)  {
     .container{
       grid-template-columns: repeat(2, minmax(150px, 1fr));
@@ -508,7 +508,7 @@ td{
       font-size: 35px;
     }
    }
-=======
+
 @media (min-width:320px) {
   .container {
     grid-template-columns: repeat(2, minmax(150px, 1fr));
@@ -699,10 +699,6 @@ td{
   .frontCard p {
     font-size: 35px;
   }
-<<<<<<< HEAD
-}
->>>>>>> 2d2a56b419d8e98911ea9e8271557a607acdb608
-=======
 
   h1{
     font-size: 45px;
@@ -724,4 +720,3 @@ td{
     font-size: 20px;
   }
 }
->>>>>>> 97df4079c87021491314238d625ff6131bf70720
