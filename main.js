@@ -1,13 +1,13 @@
 //All words
-let words = ["Alligator","Bee","Cat",
-             "Dinosaur","Elephant","Fox",
-             "Giraffe","House","Igloo",
-             "Jellyfish","King","Ladybug",
-             "Mountains","Ninja","Octopus",
-             "Pirate","Queen","Rainbow",
-             "Strawberry", "Tree", "Unicorn",
-             "Volcano","Watermelon","Xylophone",
-             "Yo-yo","Zebra"]
+let words = ["Alien","Butterfly","Cat",
+             "Dinosaur","Eagle","Flower",
+             "Giraffe","Hammer","Ice",
+             "Jellyfish","Keys","Lamp",
+             "Mountains","Ninja","Omelette",
+             "Pirate","Queen","Rabbit",
+             "Snowman", "Tree", "Unicorn",
+             "Volcano","Watermelon","X-Ray",
+             "Yak","Zebra"]
 
 //Set up text to speech
 var msg = new SpeechSynthesisUtterance();
@@ -37,7 +37,7 @@ for(let i=65; i<=90; i++){
         //alphabet image
     let imgContainer = document.createElement("div");
     let alphabetImg = document.createElement("img");
-    alphabetImg.src = `https://placehold.co/312x256/pink/white?text=${alphabet}`;
+    alphabetImg.src = `./assets/alphabet_images/${alphabet}.png`;
     imgContainer.appendChild(alphabetImg);
     frontCard.appendChild(imgContainer);
         //word for the alphabet
@@ -52,10 +52,10 @@ for(let i=65; i<=90; i++){
     let likeIcon = document.createElement("i");
     likeIcon.classList.add("fa-regular", "fa-heart");
     faIcons.appendChild(likeIcon);
-        //Flip Icon
-    let flipIcon = document.createElement("i");
-    flipIcon.classList.add("fa-solid", "fa-arrow-rotate-left");
-    faIcons.appendChild(flipIcon);
+        //Sound Icon
+    let soundIcon = document.createElement("i");
+    soundIcon.classList.add("fa-solid", "fa-volume-high");
+    faIcons.appendChild(soundIcon);
         //Share Icon
     let shareIcon = document.createElement("i");
     shareIcon.classList.add("fa-solid", "fa-share-from-square");
@@ -63,15 +63,23 @@ for(let i=65; i<=90; i++){
     
     //Show front card on click
     card.addEventListener("click", () => {
-        card.classList.add("flipped");
-        msg.text = words[i-65];
-        window.speechSynthesis.speak(msg);
+        card.classList.toggle("flipped");
+        if(card.classList.contains("flipped")) {
+            msg.text = words[i-65];
+            window.speechSynthesis.speak(msg);
+        }
     })
 
-    //Flip back on click
-    flipIcon.addEventListener("click",(event)=>{
-        card.classList.remove("flipped");
-        event.stopPropagation();
+    // Animate star icon on click
+    soundIcon.addEventListener("click",(event)=>{
+        soundIcon.classList.add("fa-beat");
+        window.speechSynthesis.speak(msg);
+        event.stopPropagation(); 
+    })
+
+    soundIcon.addEventListener("mouseleave",(event)=>{
+        soundIcon.classList.remove("fa-beat");
+        event.stopPropagation(); 
     })
 
     //Color the heart red when user clicks like
@@ -91,6 +99,20 @@ for(let i=65; i<=90; i++){
         event.stopPropagation();
     })
 
+    shareIcon.addEventListener("mouseover",(event)=>{
+        shareIcon.classList.add("fa-fade");
+        event.stopPropagation();
+    })
+
+    shareIcon.addEventListener("mouseleave",(event)=>{
+        shareIcon.classList.remove("fa-fade");
+        event.stopPropagation();
+    })
+
+    shareIcon.addEventListener("click",(event)=>{
+        event.stopPropagation();
+    })
+
 }
 
 // Give design background to back of each alphabet card
@@ -104,6 +126,7 @@ allBackCards.forEach((backCard)=>{
         j=0;
     backCard.classList.add(patterns[j]);
     j++;
+<<<<<<< HEAD
 })
 
 
@@ -127,3 +150,6 @@ setInterval(function(){
     dots.forEach((dot) => (dot.style.backgroundColor = "#59AFFF"));
     currentDot.style.backgroundColor = "white";
 },4000)
+=======
+})
+>>>>>>> 97df4079c87021491314238d625ff6131bf70720
