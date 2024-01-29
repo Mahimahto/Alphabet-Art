@@ -60,7 +60,29 @@ for(let i=65; i<=90; i++){
     let shareIcon = document.createElement("i");
     shareIcon.classList.add("fa-solid", "fa-share-from-square");
     faIcons.appendChild(shareIcon);
-    
+        //Share Image On Click Share Icon
+    let tooltip = document.createElement("span")
+    tooltip.classList.add("toolTipText")
+    tooltip.innerText = "copied-image-link"
+    shareIcon.appendChild(tooltip)    
+    shareIcon.addEventListener("click",() =>{
+        let currentUrl = window.location.href
+        let url = currentUrl + "?"+`q=${alphabet}`
+        if (navigator.share) {
+            navigator.share({
+              title: 'Alphabet-Art',
+              url: url
+            })
+          } else {
+            tooltip.style.visibility = "visible"
+            setTimeout(() =>{
+                tooltip.style.visibility = "hidden"
+            },1000)
+            
+            navigator.clipboard.writeText(url) 
+          }
+        
+    })
     //Show front card on click
     card.addEventListener("click", () => {
         card.classList.toggle("flipped");
@@ -73,7 +95,7 @@ for(let i=65; i<=90; i++){
     // Animate star icon on click
     soundIcon.addEventListener("click",(event)=>{
         soundIcon.classList.add("fa-beat");
-        window.speechSynthesis.speak(msg);
+        window.speechSynthesis.speak(msg); 
         event.stopPropagation(); 
     })
 
